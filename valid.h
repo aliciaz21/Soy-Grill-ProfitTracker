@@ -5,7 +5,7 @@ using namespace std;
 int getInteger(string prompt = "Enter integer: ") {
     int num = 0;
     cout << prompt;
-    cin >> num;
+    (cin >> num).get();
     while (!cin || cin.peek()!= '\n') {
         cin.clear();
         cin.ignore(100, '\n');
@@ -13,7 +13,7 @@ int getInteger(string prompt = "Enter integer: ") {
         cout << prompt;
         cin >> num;
     }
-    cin.get();
+    //cin.get();
     return num;
 }
 
